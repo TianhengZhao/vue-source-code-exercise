@@ -2,7 +2,7 @@ import vnode from './vnode.js';
 
 // 本手写函数无重载功能，要求必须有3个参数
 // 第三个参数可能是字符串、数组、h函数
-export default function(sel, data, c) {
+export default function (sel, data, c) {
     // 检验参数个数
     if (arguments.length !== 3) {
         throw new Error('h函数必须有3个参数！');
@@ -22,6 +22,7 @@ export default function(sel, data, c) {
         }
         return vnode(sel, data, childrenVnode, undefined, undefined);
     } else if (typeof c === 'object' && c.hasOwnProperty('sel')) {
+        // 第三个参数是h函数
         let childrenVnode = [c];
         return vnode(sel, data, childrenVnode, undefined, undefined);
     } else {

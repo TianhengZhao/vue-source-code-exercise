@@ -5,14 +5,15 @@ const old = h('ul', {}, [
     h('li', {key: 'a'}, 'aaa'),
     h('li', {key: 'b'}, 'bbb'),
     h('li', {key: 'c'}, 'ccc'),
+    h('li', {key: 'd'}, 'ddd')
 ]);
 const new1 = h('ul', {}, [
+    h('li', {key: 'd'}, 'ddd'),
+    h('li', {key: 'c'}, 'ccc'),
+    h('li', {key: 'e'}, 'eee'),
     h('li', {key: 'a'}, 'aaa'),
     h('li', {key: 'b'}, 'bbb'),
-    h('li', {key: 'x'}, 'xxx'),
-    h('li', {key: 'y'}, 'yyy'),
-    h('li', {key: 'c'}, 'ccc'),
-    h('li', {key: 'y'}, 'yyy')
+    h('li', {key: 'f'}, 'fff')
 ]);
 const container = document.getElementById("container");
 const btn = document.getElementById("btn");
