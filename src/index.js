@@ -23,23 +23,38 @@
 //     patch(old, new1);
 // }
 
-import observe from './responsive/observe.js';
-import Watcher from './responsive/Watcher.js';
+// import observe from './responsive/observe.js';
+// import Watcher from './responsive/Watcher.js';
 
-let obj = {
-    a: 1,
-    b: {
-        m: {
-            n: 4
-        }
-    }
-}
+// let obj = {
+//     a: 1,
+//     b: {
+//         m: {
+//             n: 4
+//         }
+//     }
+// }
 
-observe(obj);
+// observe(obj);
 
-let w1 = new Watcher(obj, 'a', (val, oldVal) => {
-    console.log(`obj.a 从 ${oldVal}(oldVal) 变成了 ${val}(newVal)`)
-})
+// let w1 = new Watcher(obj, 'a', (val, oldVal) => {
+//     console.log(`obj.a 从 ${oldVal}(oldVal) 变成了 ${val}(newVal)`)
+// })
 
-obj.a = 12;
+// obj.a = 12;
+
+import parse from './ast/parse.js';
+
+let templateStr = `
+    <div>
+        <h3>你好</h3>
+        <ul>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+        </ul>
+    </div>
+`;
+
+parse(templateStr);
 
