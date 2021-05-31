@@ -43,18 +43,22 @@
 
 // obj.a = 12;
 
-import parse from './ast/parse.js';
+// import parse from './ast/parse.js';
 
-let templateStr = `
-    <div>
-        <h3>你好</h3>
-        <ul>
-            <li>a</li>
-            <li>b</li>
-            <li>c</li>
-        </ul>
-    </div>
-`;
+// let templateStr = `
+//     <div>
+//         <h3>你好</h3>
+//         <ul>
+//             <li>a</li>
+//             <li>b</li>
+//             <li>c</li>
+//         </ul>
+//     </div>
+// `;
 
-parse(templateStr);
+// parse(templateStr);
+
+import Vue from './vue/Vue.js';
+
+window.Vue = Vue;
 
