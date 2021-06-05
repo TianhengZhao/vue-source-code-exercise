@@ -23,7 +23,7 @@ export default function defineReactive(data, key, val) {
         // 可被配置，如delete
         configurable: true,
         // get默认return undefined，即console.log(data.key)为undefined
-        // 若想data.key不为undefined，给set设置个固定return，但这样set新值后，再次get不会返回最新设置的值
+        // 若想data.key不为undefined，给get设置个固定return，但这样set新值后，再次get不会返回最新设置的值
         get() {
             // 实例化Watcher后执行Watcher的get方法，访问某个插值变量，从而用到此处的get方法
             // 添加依赖
